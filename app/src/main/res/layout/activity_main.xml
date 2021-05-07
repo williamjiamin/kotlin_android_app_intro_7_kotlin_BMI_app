@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE LinearLayout [<!ELEMENT LinearLayout (TextView|EditText|Button|ImageView)*><!ATTLIST LinearLayoutxmlns:android CDATA #REQUIREDxmlns:app CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDtools:context CDATA #REQUIREDandroid:gravity CDATA #REQUIREDandroid:orientation CDATA #REQUIRED><!ELEMENT TextView (#PCDATA)><!ATTLIST TextViewandroid:fontFamily CDATA #REQUIREDandroid:id CDATA #IMPLIEDandroid:layout_height CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:text CDATA #IMPLIEDandroid:textSize CDATA #REQUIREDtools:text CDATA #REQUIRED><!ELEMENT EditText (#PCDATA)><!ATTLIST EditTextandroid:digits CDATA #REQUIREDandroid:gravity CDATA #REQUIREDandroid:hint CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:importantForAutofill CDATA #REQUIREDandroid:inputType CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIRED><!ELEMENT Button (#PCDATA)><!ATTLIST Buttonandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:text CDATA #REQUIREDandroid:textColor CDATA #REQUIRED><!ELEMENT ImageView (#PCDATA)><!ATTLIST ImageViewandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_margin CDATA #REQUIREDapp:srcCompat CDATA #REQUIREDandroid:contentDescription CDATA #REQUIRED>]>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:fontFamily="sans-serif-black"
+        android:textSize="@dimen/BMI_text_size"
+        android:text="@string/app_logo"
+        tools:text="偶得健康" />
+
+    <EditText
+        android:id="@+id/weight_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:importantForAutofill="no"
+        android:hint="@string/str_weight"
+        android:inputType="number"
+        android:digits="0123456789."/>
+
+    <EditText
+        android:id="@+id/height_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:importantForAutofill="no"
+        android:hint="@string/str_height"
+        android:inputType="number"
+        android:digits="0123456789."/>
+
+    <Button
+        android:id="@+id/calculate_BMI_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:text="@string/str_button"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/BMI_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:fontFamily="cursive"
+        android:textSize="@dimen/BMI_text_size"
+        tools:text="身体状况BMI:24" />
+
+    <ImageView
+        android:id="@+id/BMI_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_sixteen"
+        app:srcCompat="@drawable/underweight"
+        android:contentDescription="@string/str_image_desc" />
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BMI Calculation App</string>
+    <string name="str_weight">请在这里输入您的体重（kg）</string>
+    <string name="str_height">请在这里输入您的身高（cm）</string>
+    <string name="str_button">点击计算身体状况</string>
+    <string name="app_logo">偶得健康</string>
+    <string name="str_image_desc">您的健康状况示意图</string>
+</resources>
